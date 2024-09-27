@@ -1,4 +1,5 @@
 import styles from './ProductPage.module.css';
+import AddToCartButton from '../../components/AddToCartButton';
 
 export default async function ProductPage({ params }) {
   const res = await fetch(`https://dummyjson.com/products/${params.id}`);
@@ -38,8 +39,7 @@ function ProductDetail({ product }) {
           </div>
           <p className={styles.price}>{product.price} USD</p>
           <p className={styles.description}>{product.description}</p>
-          <button className={styles.buyButton}>Add to Cart</button>
-        </div>
+          <AddToCartButton stock={product.stock} />        </div>
       </div>
 
       <div className={styles.reviews}>

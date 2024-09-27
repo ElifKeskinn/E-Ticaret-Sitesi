@@ -35,6 +35,8 @@
     margin-left: 20px;
     flex: 1;
     max-width: 500px;
+    display: flex;
+    flex-direction: column;
   }
   
   .title {
