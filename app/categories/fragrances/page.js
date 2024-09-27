@@ -5,9 +5,9 @@ export default async function FragrancesPage() {
   const data = await res.json();
 
   return (
-    <div>
+    <div className='category-title'>
       <h2>Fragrances Products</h2>
-      <div>
+      <div className='category-products'>
         {data.products.map(product => (
           <ProductCard key={product.id} product={product} />
         ))}
