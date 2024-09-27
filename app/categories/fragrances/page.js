@@ -1,6 +1,6 @@
 import ProductCard from '../../components/ProductCard';
 
-export default async function BeautyPage() {
+export default async function FragrancesPage() {
   const res = await fetch('https://dummyjson.com/products/category/fragrances');
   const data = await res.json();
 

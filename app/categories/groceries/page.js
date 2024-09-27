@@ -1,11 +1,11 @@
 import ProductCard from '../../components/ProductCard';
 
-export default async function BeautyPage() {
+export default async function GroceriesPage() {
   const res = await fetch('https://dummyjson.com/products/category/groceries');
   const data = await res.json();
 
   return (
-    <div>
+    <div >
       <h2>Groceries Products</h2>
       <div>
         {data.products.map(product => (

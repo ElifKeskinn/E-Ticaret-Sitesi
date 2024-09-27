@@ -1,6 +1,6 @@
 import ProductCard from '../../components/ProductCard';
 
-export default async function BeautyPage() {
+export default async function FurniturePage() {
   const res = await fetch('https://dummyjson.com/products/category/furniture');
   const data = await res.json();
 
