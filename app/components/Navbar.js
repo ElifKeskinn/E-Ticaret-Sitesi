@@ -4,9 +4,10 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link href="/" className="logo">
-          Eilfy 
+        <Link href="/" className="logo" >
+          Eilfy &nbsp;
         </Link>
+
         <div className="search-bar">
           <input type="text" placeholder="Search for product, category or brand" />
           <button type="submit">Search</button>
