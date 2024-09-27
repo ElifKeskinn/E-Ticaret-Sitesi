@@ -1,0 +1,128 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .productDetail {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .imageGallery {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .mainImage img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+  }
+  
+  .productInfo {
+    margin-left: 20px;
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .brand {
+    font-size: 18px;
+    color: gray;
+    margin-top: 5px;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .rating span {
+    margin-right: 10px;
+  }
+  
+  .price {
+    font-size: 28px;
+    color: #e60000;
+    margin-top: 10px;
+  }
+  
+  .description {
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+  
+  .buyButton {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #ff6000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .buyButton:hover {
+    background-color: #e55a00;
+  }
+  
+  .reviews {
+    margin-top: 40px;
+  }
+  
+  .reviews h2 {
+    margin-bottom: 20px;
+  }
+  
+  .review {
+    border-top: 1px solid #ddd;
+    padding: 20px 0;
+  }
+  
+  .review p {
+    margin: 5px 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .productDetail {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .imageGallery {
+      flex-direction: row;
+      margin-bottom: 20px;
+    }
+  
+    .thumbnail {
+      margin-right: 10px;
+    }
+  
+    .productInfo {
+      margin-left: 0;
+      max-width: none;
+      text-align: center;
+    }
+  
+    .buyButton {
+      width: 100%;
+    }
+  }
+  
