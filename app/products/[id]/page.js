@@ -1,5 +1,6 @@
 import styles from './ProductPage.module.css';
 import AddToCartButton from '../../components/AddToCartButton';
+import ProductImageGallery from '../../components/ProductImageGallery';
 
 export default async function ProductPage({ params }) {
   const res = await fetch(`https://dummyjson.com/products/${params.id}`);
@@ -9,26 +10,11 @@ export default async function ProductPage({ params }) {
 }
 
 function ProductDetail({ product }) {
-  // Ana resim olarak ilk resmi koyalım şimdlk.
-  const mainImage = product.images[0];
-
+  
   return (
     <div className={styles.container}>
       <div className={styles.productDetail}>
-        <div className={styles.imageGallery}>
-          {product.images?.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`${product.title} ${index + 1}`}
-              className={styles.thumbnail}
-            />
-          ))}
-        </div>
-
-        <div className={styles.mainImage}>
-          <img src={mainImage} alt={product.title} />
-        </div>
+      <ProductImageGallery images={product.images} title={product.title} />
 
         <div className={styles.productInfo}>
           <h1 className={styles.title}>{product.title}</h1>
